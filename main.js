@@ -1,6 +1,5 @@
 let colors = ["red", "blue", "green", "yellow", "brown"];
 let caseDivs = document.querySelectorAll(".case");
-// let zoneColor = document.querySelector("#zoneColor");
 
 caseDivs.forEach(caseDiv => {
     caseDiv.addEventListener("click", handleClickOnDivDOM);
@@ -8,22 +7,13 @@ caseDivs.forEach(caseDiv => {
 
 function handleClickOnDivDOM(evenement) {
     let divCliquer = evenement.target;
-    cleanColor(divCliquer)
-    
+    cleanColor(divCliquer);
+    console.log(Math.floor(Math.random() * colors.length));
+    divCliquer.classList.add(Math.floor(Math.random() * colors.length));
 }
+
 
 function cleanColor(divCliquer) {
    divCliquer.classList.remove("red","blue", "green", "yellow", "brown"); 
 }
-
-//   function getRandom(0, 4) {
-//     let random = Math.random
-//   }
-
-
-// function getRandom(0, 4) {
-//   min = Math.ceil(0);
-//   max = Math.floor(4);
-//   return Math.floor(Math.random() * (4 - 0 + 1)) + 0;
-// }
 
